@@ -1,0 +1,69 @@
+public class main {
+
+	public static void main(String[] args) {
+		
+		//add cards to deck
+    // all spades added
+		deck main = new deck("Ace of Spades");
+		main.addCard("Jack of Spades");
+		main.addCard("Queen of Spades");
+		main.addCard("King of Spades");
+		
+		for(int x = 2; x <= 10; x++){
+			main.addCard(x + " of Spades");
+		}
+		
+    // all hearts added
+		main.addCard("Ace of Hearts");
+		main.addCard("Jack of Hearts");
+		main.addCard("Queen of Hearts");
+		main.addCard("King of Hearts");
+		
+		for(int x = 2; x <= 10; x++){
+			main.addCard(x + " of Hearts");
+		}
+		
+    // diamonds added
+		main.addCard("Ace of Diamonds");
+		main.addCard("Jack of Diamonds");
+		main.addCard("Queen of Diamonds");
+		main.addCard("King of Diamonds");
+		
+		for(int x = 2; x <= 10; x++){
+			main.addCard(x + " of Diamonds");
+		}
+		
+    // clubs added
+		main.addCard("Ace of Clubs");
+		main.addCard("Jack of Clubs");
+		main.addCard("Queen of Clubs");
+		main.addCard("King of Clubs");
+		
+		for(int x = 2; x <= 10; x++){
+			main.addCard(x + " of Clubs");
+		}
+		
+		
+		//shuffle deck
+		main.shuffle();
+		
+		
+		//deal hand
+		String[] hand = new String[5];
+		hand = main.dealHand();
+		
+    // print han
+		System.out.println("Your hand,");
+		for(int x = 0; x <= 3; x++){
+			System.out.print(hand[x] + ", ");
+		}
+		System.out.println(hand[4] + ". ");
+	
+	
+		
+		
+	
+		
+	}
+
+}
