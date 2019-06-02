@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+
+public class deck {
+	public ArrayList<String>  cards = new ArrayList<String>();
+	
+	public deck(String first){
+		cards.add(first);
+	}
+	
+	//adds cards
+	public void addCard(String card){
+		cards.add(card);
+	}
+	//shuffles deck
+	public void shuffle(){
+		Collections.shuffle(cards);
+	}
+	
+	//deals hand from deck
+	public String[] dealHand(){
+		String[] hand = new String[5];
+		
+		for(int x = 0; x <= 4; x++){
+			 hand[x] =  cards.get(x).toString();
+			 //System.out.println(hand[x]);
+		}
+		
+		return hand;
+	}
+
+}
